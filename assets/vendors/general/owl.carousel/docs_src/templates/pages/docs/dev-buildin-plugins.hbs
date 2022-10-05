@@ -54,13 +54,18 @@ Usage:
 
 ```
 $('.owl-carousel').owlCarousel({
-	lazyLoad:true
+	items:3,
+	lazyLoad:true,
+	loop:true,
+    margin:10
 });
 ```
 HTML Markup:
 ```
-<div class="owl-carousel">
-	<img class="owl-lazy" data-src="https://placehold.it/350x250&text=3" alt="">
+<div class="owl-carousel owl-theme">
+	<source class="owl-lazy" media="(min-width: 650px)" data-srcset="https://placehold.it/350x250&text=3-large">
+      <source class="owl-lazy" media="(min-width: 350px)" data-srcset="https://placehold.it/350x250&text=3-medium">
+      <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="">
 	<img class="owl-lazy" data-src-retina="https://placehold.it/350x250&text=1-retina" data-src="https://placehold.it/350x250&text=1" alt="">
 	<div class="owl-lazy" data-src-retina="https://placehold.it/350x250&text=1-retina" data-src="https://placehold.it/350x250&text=1"></div>
 </div>
